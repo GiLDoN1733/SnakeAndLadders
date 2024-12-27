@@ -1,0 +1,3 @@
+﻿  Chernov.cpp
+C:\Users\Elena\OneDrive\Рабочий стол\ЫфД\SaL\Chernov\Chernov.cpp(327,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Chernov.vcxproj -> C:\Users\Elena\OneDrive\Рабочий стол\ЫфД\SaL\Chernov\x64\Debug\Chernov.exe
