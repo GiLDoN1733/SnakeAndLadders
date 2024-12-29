@@ -1,3 +1,11 @@
 ﻿  Chernov.cpp
-C:\Users\Elena\OneDrive\Рабочий стол\ЫфД\SaL\Chernov\Chernov.cpp(327,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  Chernov.vcxproj -> C:\Users\Elena\OneDrive\Рабочий стол\ЫфД\SaL\Chernov\x64\Debug\Chernov.exe
+C:\Users\Elena\OneDrive\Рабочий стол\SnakeAndLadders - github\SnakeAndLadders\SaL\Chernov\Chernov.cpp(123,56): warning C4474: "printf" : для строки формата передано слишком много аргументов
+      C:\Users\Elena\OneDrive\Рабочий стол\SnakeAndLadders - github\SnakeAndLadders\SaL\Chernov\Chernov.cpp(123,56):
+      заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
+  
+C:\Users\Elena\OneDrive\Рабочий стол\SnakeAndLadders - github\SnakeAndLadders\SaL\Chernov\Chernov.cpp(125,56): warning C4474: "printf" : для строки формата передано слишком много аргументов
+      C:\Users\Elena\OneDrive\Рабочий стол\SnakeAndLadders - github\SnakeAndLadders\SaL\Chernov\Chernov.cpp(125,56):
+      заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
+  
+C:\Users\Elena\OneDrive\Рабочий стол\SnakeAndLadders - github\SnakeAndLadders\SaL\Chernov\Chernov.cpp(299,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Chernov.vcxproj -> C:\Users\Elena\OneDrive\Рабочий стол\SnakeAndLadders - github\SnakeAndLadders\SaL\Chernov\x64\Debug\Chernov.exe

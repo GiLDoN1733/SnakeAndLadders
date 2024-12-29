@@ -3,6 +3,7 @@
 #include <stdlib.h> 
 #include <time.h> 
 #include<iostream>
+using namespace std;
 //#include <wchar.h>
 // Function to roll a six-sided die 
 int rollDie() { return rand() % 6 + 1; }
@@ -27,26 +28,26 @@ void printBoard()
 	int val = 100;
 
 	printf("\n\n\n");
-	printf("\t\t\xc9\xcd\xcd\xcd\xcd\xcd\xcd\xcb\xcd\xcd\xcd\xcd\xcd\xcd\xcb\xcd\xcd\xcd\xcd\xcd\xcd\xcb\xcd\xcd\xcd\xcd\xcd\xcd\xcb\xcd\xcd\xcd\xcd\xcd\xcd\xcb\xcd\xcd\xcd\xcd\xcd\xcd\xcb\xcd\xcd\xcd\xcd\xcd\xcd\xcb\xcd\xcd\xcd\xcd\xcd\xcd\xcb\xcd\xcd\xcd\xcd\xcd\xcd\xcb\xcd\xcd\xcd\xcd\xcd\xcd\xbb\n");
+	printf("\t\t\t\t\t\xc9\xcd\xcd\xcd\xcd\xcd\xcd\xcb\xcd\xcd\xcd\xcd\xcd\xcd\xcb\xcd\xcd\xcd\xcd\xcd\xcd\xcb\xcd\xcd\xcd\xcd\xcd\xcd\xcb\xcd\xcd\xcd\xcd\xcd\xcd\xcb\xcd\xcd\xcd\xcd\xcd\xcd\xcb\xcd\xcd\xcd\xcd\xcd\xcd\xcb\xcd\xcd\xcd\xcd\xcd\xcd\xcb\xcd\xcd\xcd\xcd\xcd\xcd\xcb\xcd\xcd\xcd\xcd\xcd\xcd\xbb\n");
 	while (val--) {
 		if (alt == 0) {
 			--iterLR;
 			while (iterLR % 10 != 1) {
 				
 				if (iterLR == 61)
-					printf("\t\t\xba \x1b[31m L \x1b[0m ");
+					printf("\t\t\t\t\t\xba\x1b[31m abcde\x1b[0m");
 				else if (iterLR == 6 || iterLR == 77)
-					printf("   \xba\x1b[32m L \x1b[0m");
+					printf("\xba\x1b[32m abcde\x1b[0m");
 				else if (iterLR == 23 || iterLR == 45 || iterLR == 65 || iterLR == 98)
-					printf("   \xba\x1b[31m S \x1b[0m");
+					printf("\xba\x1b[31m abcde\x1b[0m");
 				else if(iterLR%10==0)
-					printf("\t\t\xba N ");
+					printf("\t\t\t\t\t\xba      ");
 				else
-					printf("   \xba N ");
+					printf("\xba      ");
             iterLR--;
 			}
 			if (iterLR % 10 == 1) {
-				printf("   \xba N    \xba");
+				printf("\xba      \xba");
 			}
 			if (iterLR % 10 == 1) {
 				iterLR += 9;
@@ -54,7 +55,7 @@ void printBoard()
 			}
 			while (iterLR % 10 != 1) {
 				if (iterLR % 10 == 0)
-					printf("\t\t\xba  %3d ", board[iterLR]);
+					printf("\t\t\t\t\t\xba  %3d ", board[iterLR]);
 				else
 					printf("\xba  %3d ", board[iterLR]);
 				iterLR--;
@@ -69,118 +70,73 @@ void printBoard()
 				while (iterLR % 10 != 1) {
 					
 					if (iterLR == player1 && iterLR % 10 == 0 && iterLR == player2) {
-						printf("\t\t\xba\x1b[33m #P1P2\x1b[0m");
-					}
-					else if (iterLR == player1 && iterLR % 10 != 1 && iterLR == player2) {
-						printf("\xba\x1b[33m #P1P2 \x1b[0m\xba");
+						printf("\t\t\t\t\t\xba\x1b[33m #P1P2\x1b[0m");
 					}
 					else if (iterLR == player1 && iterLR == player2) {
-						printf("\xba\x1b[33m #P1P2 \x1b[0m");
+						printf("\xba\x1b[33m#P1P2 \x1b[0m");
 					}
-					else if (iterLR == player1 && iterLR % 10 == 0) {
-						printf("\t\t\xba  \x1b[34m #P1 \x1b[0m");
+					else if (iterLR == player1 && player1 % 10 == 0) {
+						printf("\t\t\t\t\t\xba\x1b[34m  #P1 \x1b[0m");
 					}
-					else if (iterLR == player2 && iterLR % 10 == 0) {
-						printf("\t\t\xba  \x1b[35m #P2 \x1b[0m");
-					}
-					else if (iterLR == player1 && iterLR % 10 != 1) {
-						printf("\xba  \x1b[34m #P1 \x1b[0m\xba");
-					}
-					else if (iterLR == player2 && iterLR % 10 != 1) {
-						printf("\xba  \x1b[35m #P2 \x1b[0m\xba");
+					else if (iterLR == player2 && player2 % 10 == 0) {
+						printf("\t\t\t\t\t\xba\x1b[36m  #P2 \x1b[0m");
 					}
 					else if (iterLR == player1) {
-						printf("\xba  \x1b[34m #P1 \x1b[0m");
+						printf("\xba\x1b[34m  #P1 \x1b[0m");
 					}
 					else if (iterLR == player2) {
-						printf("\xba  \x1b[35m #P2 \x1b[0m");
+						printf("\xba\x1b[36m  #P2 \x1b[0m");
 					}
 					else if (iterLR != player2 && iterLR != player1 && iterLR % 10 == 0) {
-						printf("\t\t\xba\x1b[35m #NPL \x1b[0m");
+						printf("\t\t\t\t\t\xba\x1b[35m      \x1b[0m");
 					}
 					else if (iterLR != player2 && iterLR != player1 ) {
-						printf("\xba\x1b[35m #NPL \x1b[0m");
+						printf("\xba\x1b[35m      \x1b[0m");
 					}
 					iterLR--;
 				}	
 				if (iterLR != player2 && iterLR != player1) {
-					printf("\xba\x1b[35m #NPL \x1b[0m\xba");
+					printf("\xba\x1b[35m      \x1b[0m\xba");
 				}
-			
+				else if (iterLR == player1 && iterLR % 10 == 1 && iterLR == player2) {
+					printf("\xba\x1b[33m#P1P2 \x1b[0m\xba");
+				}
+				else if (iterLR == player1 && player1 % 10 == 1) {
+					printf("\xba\x1b[34m  #P1 \x1b[0m\xba");
+				}
+				else if (iterLR == player2 && player2 % 10 == 1) {
+					printf("\xba\x1b[36m  #P2 \x1b[0m\xba");
+				}
 
 				if (iterLR % 10 == 1) {
-					printf("\n\t\t\xcc\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xb9\n");
+					printf("\n\t\t\t\t\t\xcc\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xb9\n");
 					alt = 1;
 					iterLR -= 10;
 				}
-		}/*if (iterLR == player1 && iterLR % 10 == 0 && iterLR == player2) {
-						printf("\t\t\xba \x1b[33m #PP \x1b[0m");
-					}
-					else if (iterLR == player1 && iterLR % 10 == 1 && iterLR == player2) {
-						printf("\xba \x1b[33m #PP \x1b[0m\xba");
-					}
-					else if (iterLR == player1 && iterLR == player2) {
-						printf("\xba \x1b[33m #PP \x1b[0m");
-					}
-					else if (iterLR == player1 && iterLR % 10 == 0) {
-						printf("\t\t\xba \x1b[34m #P1 \x1b[0m");
-					}
-					else if (iterLR == player2 && iterLR % 10 == 0) {
-						printf("\t\t\xba \x1b[35m #P2 \x1b[0m");
-					}
-					else if (iterLR == player1 && iterLR % 10 == 1) {
-						printf("\xba \x1b[34m #P1 \x1b[0m\xba");
-					}
-					else if (iterLR == player2 && iterLR % 10 == 1) {
-						printf("\xba \x1b[35m #P2 \x1b[0m\xba");
-					}
-					else if (iterLR == player1) {
-						printf("\xba \x1b[34m #P1 \x1b[0m");
-					}
-					else if (iterLR == player2) {
-						printf("\xba \x1b[35m #P2 \x1b[0m");
-					}*/
-
-					/*else
-					{
-						if (iterLR == 61)
-							printf("\t\t\xba \x1b[31m %d \x1b[0m ", board[iterLR]);
-						else if (iterLR == 6 || iterLR == 77)
-							printf("\xba \x1b[32m %d \x1b[0m ", board[iterLR]);
-						else if (iterLR == 23 || iterLR == 45 || iterLR == 65 || iterLR == 98)
-							printf("\xba \x1b[31m %d \x1b[0m ", board[iterLR]);
-						else if (iterLR % 10 == 0)
-							printf("\t\t\xba  %3d ", board[iterLR]);
-						else if (iterLR % 10 == 1)
-							printf("\xba  %3d \xba", board[iterLR]);
-
-						else
-							printf("\xba  %3d ", board[iterLR]);
-
-					}*/
+		}
 		else {
 			        ++iterRL;
 					while (iterRL % 10 != 0) {
 						if (iterRL == 61)
-							printf("\t\t\xba \x1b[31m %d \x1b[0m ", board[iterRL]);
+							printf("\t\t\t\t\t\xba\x1b[31m abcde\x1b[0m");
 						else if (iterRL == 6 || iterRL == 77)
-							printf("\xba  \x1b[32m %d \x1b[0m ", board[iterRL]);
+							printf("\xba\x1b[32m abcde\x1b[0m", board[iterRL]);
 						else if (iterRL == 23 || iterRL == 45 || iterRL == 61 || iterRL == 65 || iterRL == 98)
-							printf("\xba \x1b[31m %d \x1b[0m ", board[iterRL]);
-						else if (iterLR % 10 == 1)
-							printf("\t\t\xba   ");
+							printf("\xba\x1b[31m abcde\x1b[0m", board[iterRL]);
+						else if (iterRL % 10 == 1)
+							printf("\t\t\t\t\t\xba      ");
 						else
-							printf("   \xba   ");
+							printf("\xba      ");
 						iterRL++;
 					}
 					if (iterRL % 10 == 0) {
-						printf("   \xba      \xba");
+						printf("\xba      \xba");
 						printf("\n");
 						iterRL -= 9;
 					}
 					while (iterRL % 10 != 0) {
 						if (iterRL % 10 == 1)
-							printf("\t\t\xba  %3d ", board[iterRL]);
+							printf("\t\t\t\t\t\xba  %3d ", board[iterRL]);
 						else
 							printf("\xba  %3d ", board[iterRL]);
 						iterRL++;
@@ -193,90 +149,48 @@ void printBoard()
 					while (iterRL % 10 != 0) {
 						
 						if (iterRL == player1 && iterRL % 10 == 1 && iterRL == player2) {
-							printf("\t\t\xba \x1b[33m #PP \x1b[0m");
-						}
-						else if (iterRL == player1 && iterRL % 10 == 0 && iterRL == player2) {
-							printf("\xba \x1b[33m #PP \x1b[0m\xba");
+							printf("\t\t\t\t\t\xba\x1b[33m #P1P2\x1b[0m");
 						}
 						else if (iterRL == player1 && iterRL == player2) {
-							printf("\xba \x1b[33m #PP \x1b[0m");
+							printf("\xba\x1b[33m #P1P2\x1b[0m");
 						}
-						else if (iterRL == player1 && iterRL % 10 == 1) {
-							printf("\t\t\xba\x1b[34m  #P1 \x1b[0m");
+						else if (iterRL == player1 && player1 % 10 == 1) {
+							printf("\t\t\t\t\t\xba\x1b[34m  #P1 \x1b[0m");
 						}
-						else if (iterRL == player2 && iterRL % 10 == 1) {
-							printf("\t\t\xba\x1b[35m  #P2 \x1b[0m");
-						}
-						else if (iterRL == player1 && iterRL % 10 == 0) {
-							printf("\xba \x1b[34m #P1 \x1b[0m\xba");
-						}
-						else if (iterRL == player2 && iterRL % 10 == 0) {
-							printf("\xba \x1b[35m #P2 \x1b[0m\xba");
+						else if (iterRL == player2 && player2 % 10 == 1) {
+							printf("\t\t\t\t\t\xba\x1b[36m  #P2 \x1b[0m");
 						}
 						else if (iterRL == player1) {
-							printf("\xba \x1b[34m #P1 \x1b[0m");
+							printf("\xba\x1b[34m  #P1 \x1b[0m");
 						}
 						else if (iterRL == player2) {
-							printf("\xba \x1b[35m #P2 \x1b[0m");
+							printf("\xba\x1b[36m  #P2 \x1b[0m");
 						}
 						else if (iterRL != player2 && iterRL != player1 && iterRL % 10 == 1) {
-							printf("\t\t\xba\x1b[35m #NPL \x1b[0m");
+							printf("\t\t\t\t\t\xba\x1b[35m      \x1b[0m");
 						}
 						else if (iterRL != player2 && iterRL != player1) {
-							printf("\xba\x1b[35m #NPL \x1b[0m");
+							printf("\xba\x1b[35m      \x1b[0m");
 						}
 						iterRL++;
 					}
 					if (iterRL != player2 && iterRL != player1) {
-						printf("\xba\x1b[35m #NPL \x1b[0m\xba");
+						printf("\xba\x1b[35m      \x1b[0m\xba");
+					}
+					else if (iterRL == player1 && player1 % 10 == 0) {
+						printf("\xba\x1b[34m  #P1 \x1b[0m\xba");
+					}
+					else if (iterRL == player2 && player2 % 10 == 0) {
+						printf("\xba\x1b[36m  #P2 \x1b[0m\xba");
+					}
+					else if (iterRL == player1 && iterRL % 10 == 0 && iterRL == player2) {
+						printf("\xba\x1b[33m  #PP \x1b[0m\xba");
 					}
 					
-			/*iterRL++;
-			if (iterRL == player1 && iterRL % 10 == 1 && iterRL == player2) {
-				printf("\t\t\xba \x1b[33m #PP \x1b[0m");
-			}
-			else if (iterRL == player1 && iterRL % 10 == 0 && iterRL == player2) {
-				printf("\xba \x1b[33m #PP \x1b[0m\xba");
-			}
-			else if (iterRL == player1 && iterRL == player2) {
-				printf("\xba \x1b[33m #PP \x1b[0m");
-			}
-			else if (iterRL == player1 && iterRL % 10 == 1) {
-				printf("\t\t\xba\x1b[34m  #P1 \x1b[0m");
-			}
-			else if (iterRL == player2 && iterRL % 10 == 1) {
-				printf("\t\t\xba\x1b[35m  #P2 \x1b[0m");
-			}
-			else if (iterRL == player1 && iterRL % 10 == 0) {
-				printf("\xba \x1b[34m #P1 \x1b[0m\xba");
-			}
-			else if (iterRL == player2 && iterRL % 10 == 0) {
-				printf("\xba \x1b[35m #P2 \x1b[0m\xba");
-			}
-			else if (iterRL == player1) {
-				printf("\xba \x1b[34m #P1 \x1b[0m");
-			}
-			else if (iterRL == player2) {
-				printf("\xba \x1b[35m #P2 \x1b[0m");
-			}
-			else {
-				if (iterRL == 61)
-					printf("\t\t\xba \x1b[31m %d \x1b[0m ", board[iterRL]);
-				else if (iterRL == 6 || iterRL == 77)
-					printf("\xba  \x1b[32m %d \x1b[0m ", board[iterRL]);
-				else if (iterRL == 23 || iterRL == 45 || iterRL == 61 || iterRL == 65 || iterRL == 98)
-					printf("\xba \x1b[31m %d \x1b[0m ", board[iterRL]);
-				else if (iterRL % 10 == 0)
-					printf("\xba  %3d \xba", board[iterRL]);
-				else if (iterRL % 10 == 1)
-					printf("\t\t\xba  %3d ", board[iterRL]);
-
-				else
-					printf("\xba  %3d ", board[iterRL]);
-			}*/
+			
 					
 			if (iterRL % 10 == 0 && iterRL != 10) {
-				printf("\n\t\t\xcc\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xb9\n");
+				printf("\n\t\t\t\t\t\xcc\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xce\xcd\xcd\xcd\xcd\xcd\xcd\xb9\n");
 				alt = 0;
 				iterRL -= 30;
 			}
@@ -285,7 +199,9 @@ void printBoard()
 			break;
 	}
 	printf("\n");
-	printf("\t\t\xc8\xcd\xcd\xcd\xcd\xcd\xcd\xca\xcd\xcd\xcd\xcd\xcd\xcd\xca\xcd\xcd\xcd\xcd\xcd\xcd\xca\xcd\xcd\xcd\xcd\xcd\xcd\xca\xcd\xcd\xcd\xcd\xcd\xcd\xca\xcd\xcd\xcd\xcd\xcd\xcd\xca\xcd\xcd\xcd\xcd\xcd\xcd\xca\xcd\xcd\xcd\xcd\xcd\xcd\xca\xcd\xcd\xcd\xcd\xcd\xcd\xca\xcd\xcd\xcd\xcd\xcd\xcd\xb9\n");
+	printf("\t\t\t\t\t\xc8\xcd\xcd\xcd\xcd\xcd\xcd\xca\xcd\xcd\xcd\xcd\xcd\xcd\xca\xcd\xcd\xcd\xcd\xcd\xcd\xca\xcd\xcd\xcd\xcd\xcd\xcd\xca\xcd\xcd\xcd\xcd\xcd\xcd\xca\xcd\xcd\xcd\xcd\xcd\xcd\xca\xcd\xcd\xcd\xcd\xcd\xcd\xca\xcd\xcd\xcd\xcd\xcd\xcd\xca\xcd\xcd\xcd\xcd\xcd\xcd\xca\xcd\xcd\xcd\xcd\xcd\xcd\xd9\n\n");
+
+
 }
 
 // Function to move the player 
@@ -321,9 +237,16 @@ int movePlayer(int currentPlayer, int roll)
 
 	return newSquare;
 }
+void MainMenuText(void)
+{
 
+
+
+}
 int main()
 {
+	MainMenuText();
+
 	srand(time(0)); // Initialize random seed 
 	int currentPlayer = 1;
 	int won = 0;
@@ -337,25 +260,27 @@ int main()
 			currentPlayer);
 		getchar(); // Wait for the player to press Enter 
 		int roll = rollDie();
-		printf("You rolled a %d.\n", roll);
 
 		if (currentPlayer == 1) {
-			player1 = movePlayer(player1, roll);
 			system("cls");
+			player1 = movePlayer(player1, roll);
 			printBoard();
+			printf("Player 1 rolled %d.\n", roll);
 			printf("Player 1 is now at square %d.\n\n", player1);
 			if (player1 == 100) {
+				
 				printf("Player 1 wins!\n");
 				won = 1;
 			}
 		}
 		else {
-			player2 = movePlayer(player2, roll);
-			printf("Player 2 is now at square %d.\n\n",
-				player2);
 			system("cls");
+			player2 = movePlayer(player2, roll);
 			printBoard();
+			printf("Player 2 rolled %d.\n", roll);
+            printf("Player 2 is now at square %d.\n\n",player2);
 			if (player2 == 100) {
+				
 				printf("Player 2 wins!\n");
 				won = 1;
 			}
