@@ -3,14 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Elena\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\SnakeAndLadders - github\\SnakeAndLadders\\SaL\\Chernov\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Elena\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\tabledraw.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B3D27A7D-7F8A-4744-848E-B01F0A0F7800}|Chernov.vcxproj|C:\\Users\\Elena\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\SnakeAndLadders - github\\SnakeAndLadders\\SaL\\Chernov\\Chernov.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B3D27A7D-7F8A-4744-848E-B01F0A0F7800}|Chernov.vcxproj|solutionrelative:Chernov.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Elena\\AppData\\Local\\Temp\\Rar$DIa12172.8959\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,43 +14,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 346,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Main.cpp",
-              "DocumentMoniker": "C:\\Users\\Elena\\AppData\\Local\\Temp\\Rar$DIa12172.8959\\Main.cpp",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\Rar$DIa12172.8959\\Main.cpp",
-              "ToolTip": "C:\\Users\\Elena\\AppData\\Local\\Temp\\Rar$DIa12172.8959\\Main.cpp",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\Rar$DIa12172.8959\\Main.cpp",
-              "ViewState": "AgIAAHQBAAAAAAAAAAAAADIBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-29T10:56:20.677Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "tabledraw.cpp",
-              "DocumentMoniker": "C:\\Users\\Elena\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\tabledraw.cpp",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\tabledraw.cpp",
-              "ToolTip": "C:\\Users\\Elena\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\tabledraw.cpp",
-              "RelativeToolTip": "..\\..\\..\\..\\tabledraw.cpp",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADsAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-29T06:51:55.519Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Chernov.cpp",
               "DocumentMoniker": "C:\\Users\\Elena\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\SnakeAndLadders - github\\SnakeAndLadders\\SaL\\Chernov\\Chernov.cpp",
               "RelativeDocumentMoniker": "Chernov.cpp",
               "ToolTip": "C:\\Users\\Elena\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\SnakeAndLadders - github\\SnakeAndLadders\\SaL\\Chernov\\Chernov.cpp",
               "RelativeToolTip": "Chernov.cpp",
-              "ViewState": "AgIAAOEAAAAAAAAAAAAiwBEBAADQAAAAAAAAAA==",
+              "ViewState": "AgIAAB0BAAAAAAAAAAAAAFIBAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-25T10:35:11.526Z",
               "EditorCaption": ""
