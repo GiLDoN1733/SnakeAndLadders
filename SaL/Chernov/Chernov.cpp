@@ -4,6 +4,7 @@
 #include <time.h> 
 #include<iostream>
 #include <conio.h>
+#include <windows.h>
 using namespace std;
 #define UpStr   "\t\t\t\t\t\xc9\xcd\xcd\xcd\xcd\xcd\xcd\xcb" \
                 "\xcd\xcd\xcd\xcd\xcd\xcd\xcb" \
@@ -278,76 +279,229 @@ int movePlayer(int currentPlayer, int roll)
 
 	return newSquare;
 }
-void MainMenuText(void)
+int MainMenuText()
 {
-
-
-
+	system("title -=Snakes and Ladder=-");
+	HWND hWindowConsole = GetConsoleWindow();
+	MoveWindow(hWindowConsole, 0, 0, 1200, 900, TRUE);
+	HMENU hm;
+	hm = GetSystemMenu(hWindowConsole, FALSE);
+	RemoveMenu(hm, SC_SIZE, MF_BYCOMMAND | MF_REMOVE);
+	RemoveMenu(hm, SC_MAXIMIZE, MF_BYCOMMAND | MF_REMOVE);
+	DrawMenuBar(hWindowConsole);
+	int Operat;
+	system("mode con cols=160 lines=50");
+	printf("\n\n\n\n\n\n\n");
+	printf("\t\t\t\t\t\t\x1b[31m   ######  ##    ##    ###    ##    ## ########  #######     \x1b[0m\n");
+	printf("\t\t\t\t\t\t\x1b[31m  ##    ## ###   ##   ## ##   ##   ##  ##       ##    ##     \x1b[0m\n");
+	printf("\t\t\t\t\t\t\x1b[31m  ##       ####  ##  ##   ##  ##  ##   ##       ##           \x1b[0m\n");
+	printf("\t\t\t\t\t\t\x1b[31m   ######  ## ## ## ##     ## #####    ######    ######      \x1b[0m\n");
+	printf("\t\t\t\t\t\t\x1b[31m        ## ##  #### ######### ##  ##   ##             ##     \x1b[0m\n");
+	printf("\t\t\t\t\t\t\x1b[31m  ##    ## ##   ### ##     ## ##   ##  ##       ##    ##     \x1b[0m\n");
+	printf("\t\t\t\t\t\t\x1b[31m   ######  ##    ## ##     ## ##    ## ########  ######      \x1b[0m\n\n");
+	printf("\t\t\t\t\t\t\x1b[33m     ###    ##    ## ########  \x1b[0m\n");
+	printf("\t\t\t\t\t\t\x1b[33m    ## ##   ###   ## ##     ## \x1b[0m             Game\n");
+	printf("\t\t\t\t\t\t\x1b[33m   ##   ##  ####  ## ##     ## \x1b[0m    1. Player vs Player\n");
+	printf("\t\t\t\t\t\t\x1b[33m  ##     ## ## ## ## ##     ## \x1b[0m    2. Player vs Computer\n");
+	printf("\t\t\t\t\t\t\x1b[33m  ######### ##  #### ##     ## \x1b[0m    3. Exit Game\n");
+	printf("\t\t\t\t\t\t\x1b[33m  ##     ## ##   ### ##     ## \x1b[0m    4. Help\n");
+	printf("\t\t\t\t\t\t\x1b[33m  ##     ## ##    ## ########                                \x1b[0m\n\n");
+	printf("\t\t\t\t\t\t\x1b[32m  ##          ###    ########  ########  ######## ########   \x1b[0m\n");
+	printf("\t\t\t\t\t\t\x1b[32m  ##         ## ##   ##     ## ##     ## ##       ##     ##  \x1b[0m\n");
+	printf("\t\t\t\t\t\t\x1b[32m  ##        ##   ##  ##     ## ##     ## ##       ##     ##  \x1b[0m\n");
+	printf("\t\t\t\t\t\t\x1b[32m  ##       ##     ## ##     ## ##     ## ######   ########   \x1b[0m\n");
+	printf("\t\t\t\t\t\t\x1b[32m  ##       ######### ##     ## ##     ## ##       ##   ##    \x1b[0m\n");
+	printf("\t\t\t\t\t\t\x1b[32m  ##       ##     ## ##     ## ##     ## ##       ##    ##   \x1b[0m\n");
+	printf("\t\t\t\t\t\t\x1b[32m  ######## ##     ## ########  ########  ######## ##     ##  \x1b[0m\n\n");
+	printf("\t\t\t\t\t\t Choose Operation: ");
+	scanf_s("%d", &Operat);
+	return Operat;
+}
+void Player1Wins() {
+	system("cls");
+	printf("\n\n\n");
+	printf("\t\t\t\t\t\x1b[34m  ########  ##          ###    ##    ## ######## ########        ##\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[34m  ##     ## ##         ## ##    ##  ##  ##       ##     ##     ####\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[34m  ##     ## ##        ##   ##    ####   ##       ##     ##       ##\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[34m  ########  ##       ##     ##    ##    ######   ########        ##\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[34m  ##        ##       #########    ##    ##       ##   ##         ##\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[34m  ##        ##       ##     ##    ##    ##       ##    ##        ##\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[34m  ##        ######## ##     ##    ##    ######## ##     ##     ######\x1b[0m\n\n");
+	printf("\t\t\t\t\t\x1b[34m                 ##      ## #### ##    ## ####\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[34m                 ##  ##  ##  ##  ###   ## ####\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[34m                 ##  ##  ##  ##  ####  ## ####\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[34m                 ##  ##  ##  ##  ## ## ##  ##\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[34m                 ##  ##  ##  ##  ##  ####\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[34m                 ##  ##  ##  ##  ##   ### ####\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[34m                  ###  ###  #### ##    ## ####\x1b[0m\n");
+	system("PAUSE");
+}
+void Player2Wins() {
+	system("cls");
+	printf("\n\n\n");
+	printf("\t\t\t\t\t\x1b[36m  ########  ##          ###    ##    ## ######## ########      #######\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[36m  ##     ## ##         ## ##    ##  ##  ##       ##     ##    ##     ##\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[36m  ##     ## ##        ##   ##    ####   ##       ##     ##           ##\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[36m  ########  ##       ##     ##    ##    ######   ########      #######\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[36m  ##        ##       #########    ##    ##       ##   ##      ##\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[36m  ##        ##       ##     ##    ##    ##       ##    ##     ##\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[36m  ##        ######## ##     ##    ##    ######## ##     ##    #########\x1b[0m\n\n");
+	printf("\t\t\t\t\t\x1b[36m                 ##      ## #### ##    ## ####\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[36m                 ##  ##  ##  ##  ###   ## ####\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[36m                 ##  ##  ##  ##  ####  ## ####\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[36m                 ##  ##  ##  ##  ## ## ##  ##\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[36m                 ##  ##  ##  ##  ##  ####\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[36m                 ##  ##  ##  ##  ##   ### ####\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[36m                  ###  ###  #### ##    ## ####\x1b[0m\n");
+	system("PAUSE");
+}
+void ComtuperWins() {
+	system("cls");
+	printf("\n\n\n");
+	printf("\t\t\t\t\t\x1b[31m   ######   #######  ##     ## ########  ##     ## ######## ######## ########\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[31m  ##    ## ##     ## ###   ### ##     ## ##     ##    ##    ##       ##     ##\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[31m  ##       ##     ## #### #### ##     ## ##     ##    ##    ##       ##     ##\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[31m  ##       ##     ## ## ### ## ########  ##     ##    ##    ######   ########\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[31m  ##       ##     ## ##     ## ##        ##     ##    ##    ##       ##   ##\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[31m  ##    ## ##     ## ##     ## ##        ##     ##    ##    ##       ##    ##\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[31m   ######   #######  ##     ## ##         #######     ##    ######## ##     ##\x1b[0m\n\n");
+	printf("\t\t\t\t\t\x1b[31m                       ##      ## #### ##    ## ####\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[31m                       ##  ##  ##  ##  ###   ## ####\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[31m                       ##  ##  ##  ##  ####  ## ####\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[31m                       ##  ##  ##  ##  ## ## ##  ##\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[31m                       ##  ##  ##  ##  ##  ####\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[31m                       ##  ##  ##  ##  ##   ### ####\x1b[0m\n");
+	printf("\t\t\t\t\t\x1b[31m                        ###  ###  #### ##    ## ####\x1b[0m\n");
+	system("PAUSE");
 }
 int main()
 {
-	MainMenuText();
-
-	srand(time(0)); // Initialize random seed 
-	int currentPlayer = 1;
-	int won = 0;
-	system("mode con cols=160 lines=50");
-
-	//HWND window_header = GetConsoleWindow();
-	//SetWindowPos(window_header, HWND_TOP, 0, 0, 300, 300, NULL);
-
-	printf("Snake and Ladder Game\n");
-	printBoard();
-	while (!won) {
-
-		printf(
-			"\nPlayer %d, press Enter to roll the die...",
-			currentPlayer);
-	     // Wait for the player to press Enter 
-		switch (_getch()) {
-		case(13): {
-			if (currentPlayer == 1) {
-				int roll = rollDie();
-				system("cls");
-				player1 = movePlayer(player1, roll);
-				printBoard();
-				printf("Player 1 rolled %d.\n", roll);
-				printf("Player 1 is now at square %d.\n\n", player1);
-				if (player1 == 100) {
-					printf("Player 1 wins!\n");
-					won = 1;
+	int PlayTheGame = 0;
+	while (!PlayTheGame) {
+		player1 = 0, player2 = 0;
+		switch (MainMenuText()) {
+		case (1): {
+			srand(time(0)); // Initialize random seed 
+			int currentPlayer = 1;
+			int won = 0;
+			system("mode con cols=160 lines=50");
+			//HWND window_header = GetConsoleWindow();
+			//SetWindowPos(window_header, HWND_TOP, 0, 0, 300, 300, NULL);
+			printBoard();
+			while (!won) {
+				printf(
+					"\nPlayer %d, press Enter to roll the die...",
+					currentPlayer);
+				// Wait for the player to press Enter 
+				switch (_getch()) {
+				case(13): {
+					if (currentPlayer == 1) {
+						int roll = rollDie();
+						system("cls");
+						player1 = movePlayer(player1, roll);
+						printBoard();
+						printf("Player 1 rolled %d.\n", roll);
+						printf("Player 1 is now at square %d.\n\n", player1);
+						if (player1 == 100) {
+							Player1Wins();
+							won = 1;
+							break;
+						}
+						currentPlayer = (currentPlayer == 1) ? 2 : 1;
+					}
+					else {
+						int roll = rollDie();
+						system("cls");
+						player2 = movePlayer(player2, roll);
+						printBoard();
+						printf("Player 2 rolled %d.\n", roll);
+						printf("Player 2 is now at square %d.\n\n", player2);
+						if (player2 == 100) {
+							Player2Wins();
+							won = 1;
+							break;
+						}
+						currentPlayer = (currentPlayer == 1) ? 2 : 1;
+					}
+					break;
 				}
-				currentPlayer = (currentPlayer == 1) ? 2 : 1;
-			}
-			else {
-				int roll = rollDie();
-				system("cls");
-				player2 = movePlayer(player2, roll);
-				printBoard();
-				printf("Player 2 rolled %d.\n", roll);
-				printf("Player 2 is now at square %d.\n\n", player2);
-				if (player2 == 100) {
-					printf("Player 2 wins!\n");
-					won = 1;
+				default: {
+					system("cls");
+					printBoard();
+					printf("Player 1 is now at square %d.\n\n", player1);
+					printf("Player 2 is now at square %d.\n\n", player2);
+					printf("Incorrect symbol, Press Enter to Start");
+					break;
 				}
-				currentPlayer = (currentPlayer == 1) ? 2 : 1;
 
+
+				}
 			}
 			break;
-		
-		};
-		default: {
-			system("cls");
-			printBoard();
-			printf("Player 1 is now at square %d.\n\n", player1);
-			printf("Player 2 is now at square %d.\n\n", player2);
-			printf("Incorrect symbol, Press Enter to Start");
-
-			}
 		}
-}
-		return 0;
+		case(2): {
+			srand(time(0)); // Initialize random seed 
+			int currentPlayer = 1;
+			int won = 0;
+			system("mode con cols=160 lines=50");
+
+			//HWND window_header = GetConsoleWindow();
+			//SetWindowPos(window_header, HWND_TOP, 0, 0, 300, 300, NULL);
+			printBoard();
+			printf(
+				"\nPlayer %d, press Enter to roll the die...",
+				currentPlayer);
+			while (!won) {
+				// Wait for the player to press Enter 
+				switch (_getch()) {
+				case(13): {
+					int roll = rollDie();
+					system("cls");
+					player1 = movePlayer(player1, roll);
+					printBoard();
+					printf("Player 1 rolled %d.\n", roll);
+					printf("Player 1 is now at square %d.\n\n", player1);
+					if (player1 == 100) {
+						Player1Wins();
+						won = 1;
+						break;
+					}
+					Sleep(500);
+					currentPlayer = (currentPlayer == 1) ? 2 : 1;
+					roll = rollDie();
+					system("cls");
+					player2 = movePlayer(player2, roll);
+					printBoard();
+					printf("Computer rolled %d.\n", roll);
+					printf("Computer is now at square %d.\n\n", player2);
+					printf("Player 1, press Enter to roll the die...");
+					if (player2 == 100) {
+						ComtuperWins();
+						won = 1;
+						break;
+					}
+					currentPlayer = (currentPlayer == 1) ? 2 : 1;
+					break;
+				};
+				default: {
+					system("cls");
+					printBoard();
+					printf("Player 1 is now at square %d.\n\n", player1);
+					printf("Computer is now at square %d.\n\n", player2);
+					printf("Incorrect symbol, Press Enter to Start");
+					break;
+				}
+				}
+			}
+			break;
+		}
+		case(3): {
+			exit(0);
+		}
+		default: {
+			printf("Incorrect symbol, Please type need symbol");
+			Sleep(3000);
+		}
+	  }
 	}
-
-
-
+}
