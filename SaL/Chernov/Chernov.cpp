@@ -279,7 +279,7 @@ int movePlayer(int currentPlayer, int roll)
 
 	return newSquare;
 }
-int MainMenuText()
+char MainMenuText()
 {
 	system("title -=Snakes and Ladder=-");
 	HWND hWindowConsole = GetConsoleWindow();
@@ -289,7 +289,7 @@ int MainMenuText()
 	RemoveMenu(hm, SC_SIZE, MF_BYCOMMAND | MF_REMOVE);
 	RemoveMenu(hm, SC_MAXIMIZE, MF_BYCOMMAND | MF_REMOVE);
 	DrawMenuBar(hWindowConsole);
-	int Operat;
+	char Operat;
 	system("mode con cols=160 lines=50");
 	printf("\n\n\n\n\n\n\n");
 	printf("\t\t\t\t\t\t\x1b[31m   ######  ##    ##    ###    ##    ## ########  #######     \x1b[0m\n");
@@ -313,13 +313,12 @@ int MainMenuText()
 	printf("\t\t\t\t\t\t\x1b[32m  ##       ######### ##     ## ##     ## ##       ##   ##    \x1b[0m\n");
 	printf("\t\t\t\t\t\t\x1b[32m  ##       ##     ## ##     ## ##     ## ##       ##    ##   \x1b[0m\n");
 	printf("\t\t\t\t\t\t\x1b[32m  ######## ##     ## ########  ########  ######## ##     ##  \x1b[0m\n\n");
-	printf("\t\t\t\t\t\t Choose Operation: ");
-	scanf_s("%d", &Operat);
-	return Operat;
+	Sleep(400);
+		return _getch();
 }
 void Player1Wins() {
 	system("cls");
-	printf("\n\n\n");
+	printf("\n\n\n\n\n\n\n");
 	printf("\t\t\t\t\t\x1b[34m  ########  ##          ###    ##    ## ######## ########        ##\x1b[0m\n");
 	printf("\t\t\t\t\t\x1b[34m  ##     ## ##         ## ##    ##  ##  ##       ##     ##     ####\x1b[0m\n");
 	printf("\t\t\t\t\t\x1b[34m  ##     ## ##        ##   ##    ####   ##       ##     ##       ##\x1b[0m\n");
@@ -338,7 +337,7 @@ void Player1Wins() {
 }
 void Player2Wins() {
 	system("cls");
-	printf("\n\n\n");
+	printf("\n\n\n\n\n\n\n");
 	printf("\t\t\t\t\t\x1b[36m  ########  ##          ###    ##    ## ######## ########      #######\x1b[0m\n");
 	printf("\t\t\t\t\t\x1b[36m  ##     ## ##         ## ##    ##  ##  ##       ##     ##    ##     ##\x1b[0m\n");
 	printf("\t\t\t\t\t\x1b[36m  ##     ## ##        ##   ##    ####   ##       ##     ##           ##\x1b[0m\n");
@@ -357,7 +356,7 @@ void Player2Wins() {
 }
 void ComtuperWins() {
 	system("cls");
-	printf("\n\n\n");
+	printf("\n\n\n\n\n\n\n");
 	printf("\t\t\t\t\t\x1b[31m   ######   #######  ##     ## ########  ##     ## ######## ######## ########\x1b[0m\n");
 	printf("\t\t\t\t\t\x1b[31m  ##    ## ##     ## ###   ### ##     ## ##     ##    ##    ##       ##     ##\x1b[0m\n");
 	printf("\t\t\t\t\t\x1b[31m  ##       ##     ## #### #### ##     ## ##     ##    ##    ##       ##     ##\x1b[0m\n");
@@ -380,7 +379,7 @@ int main()
 	while (!PlayTheGame) {
 		player1 = 0, player2 = 0;
 		switch (MainMenuText()) {
-		case (1): {
+		case (49): {
 			srand(time(0)); // Initialize random seed 
 			int currentPlayer = 1;
 			int won = 0;
@@ -439,7 +438,7 @@ int main()
 			}
 			break;
 		}
-		case(2): {
+		case(50): {
 			srand(time(0)); // Initialize random seed 
 			int currentPlayer = 1;
 			int won = 0;
@@ -466,7 +465,7 @@ int main()
 						won = 1;
 						break;
 					}
-					Sleep(500);
+					Sleep(300);
 					currentPlayer = (currentPlayer == 1) ? 2 : 1;
 					roll = rollDie();
 					system("cls");
@@ -495,7 +494,7 @@ int main()
 			}
 			break;
 		}
-		case(3): {
+		case(51): {
 			exit(0);
 		}
 		default: {
