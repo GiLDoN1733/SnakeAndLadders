@@ -1,3 +1,0 @@
-﻿  Chernov.cpp
-C:\Users\Elena\OneDrive\Рабочий стол\SnakeAndLadders - github\SnakeAndLadders\SaL\Chernov\Chernov.cpp(404,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  Chernov.vcxproj -> C:\Users\Elena\OneDrive\Рабочий стол\SnakeAndLadders - github\SnakeAndLadders\SaL\Chernov\x64\Debug\Chernov.exe

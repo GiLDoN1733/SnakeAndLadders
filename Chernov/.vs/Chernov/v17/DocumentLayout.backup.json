@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Elena\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\SnakeAndLadders - github\\SnakeAndLadders\\Chernov\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B3D27A7D-7F8A-4744-848E-B01F0A0F7800}|Chernov.vcxproj|C:\\Users\\Elena\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\SnakeAndLadders - github\\SnakeAndLadders\\Chernov\\Chernov.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B3D27A7D-7F8A-4744-848E-B01F0A0F7800}|Chernov.vcxproj|solutionrelative:Chernov.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 325,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Chernov.cpp",
+              "DocumentMoniker": "C:\\Users\\Elena\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\SnakeAndLadders - github\\SnakeAndLadders\\Chernov\\Chernov.cpp",
+              "RelativeDocumentMoniker": "Chernov.cpp",
+              "ToolTip": "C:\\Users\\Elena\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\SnakeAndLadders - github\\SnakeAndLadders\\Chernov\\Chernov.cpp*",
+              "RelativeToolTip": "Chernov.cpp*",
+              "ViewState": "AgIAAAwCAAAAAAAAAAAowBoCAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-25T10:35:11.526Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

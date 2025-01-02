@@ -1,3 +1,0 @@
-﻿  Main.cpp
-C:\Users\Elena\OneDrive\Рабочий стол\SnakeAndLadders - github\SnakeAndLadders\SaL\Main.cpp(182,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  SaL.vcxproj -> C:\Users\Elena\OneDrive\Рабочий стол\SnakeAndLadders - github\SnakeAndLadders\SaL\x64\Debug\SaL.exe
