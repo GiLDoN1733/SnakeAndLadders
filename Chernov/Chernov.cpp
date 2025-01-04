@@ -13,26 +13,24 @@ int main()
     RemoveMenu(hm, SC_MAXIMIZE, MF_BYCOMMAND | MF_REMOVE);
     DrawMenuBar(hWindowConsole);
     srand(time(0));
-    // Initialize random seed 
+    // Инициализаця рандома
     int PlayTheGame = 0;
     while (!PlayTheGame) {
         player1 = 0, player2 = 0;
-        MainMenuText();
+        MainMenuText(); //Вызов функции главного меню 
         setlocale(LC_CTYPE, "UTF-8");
-        switch (СhooseVar()) {
-        case (49): {
+        switch (СhooseVar()) { // выбор варианта команд
+        case (49): {// вариант Игрок vs Игрок
             int currentPlayer = 1;
             int won = 0;
-            system("mode con cols=160 lines=50");
-            //HWND window_header = GetConsoleWindow();
-            //SetWindowPos(window_header, HWND_TOP, 0, 0, 300, 300, NULL);
-            printBoard();
+            system("mode con cols=160 lines=50");// фиксирование окна консоли определённого размера
+            printBoard();// печать игрового поля
             while (!won) {
                 printf("\n\t Игрок %d,нажми ENTER что бы бросить кубик...",currentPlayer);
-                // Wait for the player to press Enter 
+                // ждём пока пользователь нажмёт ENTER
                 switch (_getch()) {
-                case(13): {
-                    if (currentPlayer == 1) {
+                case(13): {                     // результат нажатия клавиши ENTER
+                    if (currentPlayer == 1) { // условие при ходе игока1
                         int roll = rollDie();
                         system("cls");
                         player1 = movePlayer(player1, roll);
@@ -41,13 +39,13 @@ int main()
                         printf("\tИгрок 1 сейчас находится на %d клетке.\n\n", player1);
                         if (player1 == 100) {
                             Player1Wins();
-                            Sleep(3000);
+                            Sleep(500);
                             won = 1;
                             break;
                         }
                         currentPlayer = (currentPlayer == 1) ? 2 : 1;
                     }
-                    else {
+                    else { // условие при ходе игрока2
                         int roll = rollDie();
                         system("cls");
                         player2 = movePlayer(player2, roll);
@@ -56,7 +54,7 @@ int main()
                         printf("\tИгрок 2 сейчас находится на %d клетке.\n\n", player2);
                         if (player2 == 100) {
                             Player2Wins();
-                            Sleep(3000);
+                            Sleep(500);
                             won = 1;
                             break;
                         }
@@ -64,7 +62,7 @@ int main()
                     }
                     break;
                 }
-                default: {
+                default: { // результат при нажатии неверной клавиши
                     system("cls");
                     printBoard();
                     printf("\tИгрок 1 сейчас находится на %d клетке.\n\n", player1);
@@ -78,7 +76,7 @@ int main()
             }
             break;
         }
-        case(50): {
+        case(50): {//
             int currentPlayer = 1;
             int won = 0;
             system("mode con cols=160 lines=50");
@@ -101,11 +99,11 @@ int main()
                     printf("\tИгрок 1 сейчас находится на %d клетке.\n\n", player1);
                     if (player1 == 100) {
                         Player1Wins();
-                        Sleep(3000);
+                        Sleep(500);
                         won = 1;
                         break;
                     }
-                    Sleep(300);
+                    Sleep(1000);
                     currentPlayer = (currentPlayer == 1) ? 2 : 1;
                     roll = rollDie();
                     system("cls");
@@ -116,7 +114,7 @@ int main()
                     printf("\n Игрок 1,нажми ENTER что бы бросить кубик...");
                     if (player2 == 100) {
                         ComtuperWins();
-                        Sleep(3000);
+                        Sleep(500);
                         won = 1;
                         break;
                     }
